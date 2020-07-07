@@ -5,14 +5,22 @@ import { fetchData } from './Api'
 
 
 class App extends React.Component {
-  async componentDidMount(){
-    const data=await fetchData() //for an async function using await and storing in variable
-    console.log(data)            //calling the variable in console
+  state={
+    data:{}
+
   }
-  render() {
+  async componentDidMount(){
+    const fedata=await fetchData() //for an async function using await and storing in variable
+    console.log(fedata)            //calling the variable in console
+
+    this.setState({data:fedata})
+  }
+  render() 
+  {
+    const {data}=this.state
     return (
       <div className={styles.container}>
-        <Cards />
+        <Cards data={data}/>
         <Charts />
         <Country />
 
