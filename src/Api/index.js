@@ -22,3 +22,18 @@ export const fetchData  = async() =>{ //exporting the function by using export
     
 
 }
+// Another function for daily data
+export const fetchdaily = async () =>{
+    try{
+           const {data}=await axios.get(`${url}/daily`)
+           //{console.log(data)}// not on console pass on charts
+           const modifiedData = data.map((dailyData) => ({
+               confirmed:dailyData.confirmed.total,
+               deaths:dailyData.deaths.total,
+               date:dailyData.reportDate,
+           }))    
+        return modifiedData;
+
+        }
+    catch(error){}
+}
