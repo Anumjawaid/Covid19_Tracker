@@ -4,18 +4,18 @@ import {Line,Bar} from 'react-chartjs-2'
 import styles from './charts.module.css'
 
 // Ex6 function
-const Charts = () => {
+const Charts = ({data:{confirmed,recovered,deaths},country}) => {
     const [dailyData,setdailyData]=useState([])
 
     useEffect(() => {
         const fetchApi = async () => {
         setdailyData(await fetchdaily());
         }
-        console.log(dailyData)
+        // console.log(dailyData)
 
         fetchApi();
 
-    })
+    },[])
 
     const lineChart = (
         dailyData.length !=0//if array is 0 otherwise the folowing
@@ -41,9 +41,35 @@ const Charts = () => {
             />
         ):null
     );
+    const barChart =(
+        confirmed
+        ?(
+            <Bar 
+            data={{
+                labels: ['Infected','Recovered','Deaths'],
+                datasets:[{
+                    label:'People',
+                    backgroundColor:['rgba(255,0,0,0.5)','rgba(0,255,0,0.5)','rgba(0,0,255,0.5)'
+                ],
+                data:[confirmed.value,recovered.value,deaths.value] 
+
+                }]
+            }}
+            options={{
+                legend:{display:false},
+                title:{display:true ,text:`Current state in ${country}`}
+            }}
+
+            />
+        ):null
+    );
     return(
         <div className={styles.container}>
-            {lineChart}
+            {/* {lineChart}
+            <h1> </h1>
+            
+            {barChart} */}
+            {country ? barChart:lineChart}
         </div>
     )
 
