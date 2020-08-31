@@ -19,7 +19,7 @@ const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
                         <Typography variant='h5'>
                             <Countup start={0} end={confirmed.value} duration={2.5} separator=","></Countup></Typography>
                         <Typography color="textSecondary" >{new Date(lastUpdate).toDateString()}</Typography>
-                        <Typography variant='body2'> Lorem ipssum dolor sit, amet consectetur adipisicing elit. Laborum magni repellendus assumenda adipisci! Magnam explicabo aliquid ad quibusdam? Doloremque aspernatur autem officia veniam at distinctio placeat neque laboriosam consectetur! Magnam?</Typography>
+                        {/* <Typography variant='body2'> Lorem ipssum dolor sit, amet consectetur adipisicing elit. Laborum magni repellendus assumenda adipisci! Magnam explicabo aliquid ad quibusdam? Doloremque aspernatur autem officia veniam at distinctio placeat neque laboriosam consectetur! Magnam?</Typography> */}
 
                     </CardContent>
                 </Grid>
