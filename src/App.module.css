@@ -1,9 +1,15 @@
 body{
-    background-color: aquamarine;
+background-image: url('./UI/bgc19.JPG');
+background-attachment: fixed;
+background-size: cover;
+background-repeat: no-repeat;
+/* opacity: 0.5; */
 }
 .container{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction:column;
+    
+
 }
