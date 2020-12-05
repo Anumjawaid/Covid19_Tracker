@@ -2,8 +2,10 @@
 import React, { Component } from 'react';
 import styles from './App.module.css';
 import { Charts, Cards, Country } from './Blocks'
+import Footer from './Blocks/copywright/copywright'
 import { fetchData } from './Api'
-
+import Corona from './UI/cor.png'
+import Glob from './UI/glob.png' 
 
 class App extends React.Component {
   state={
@@ -31,14 +33,21 @@ class App extends React.Component {
     const {data,country}=this.state
     return (
       <div className={styles.container}>
-        <h1>Covid_19 Tracker</h1>
-        <h3>Cases</h3>
+        <h1>C<img src={Corona} className={styles.image}/>vid 19 Tracker</h1>
+        <div className='imghead'><img className={styles.globe}src={Glob}/><h2>Global Cases</h2></div>
+
+        
         <Cards data={data}/>
         <h3>Country Selector</h3>
         <Country handleCountryChange={this.handleCountryChange} />
         <h3>Data</h3>
 
          <Charts data={data} country={country}/>
+         <br/>
+        <br/>
+        <br/>
+        <br/>
+         <Footer />
 
 
       </div>

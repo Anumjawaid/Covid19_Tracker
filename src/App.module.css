@@ -18,3 +18,36 @@ font-family:'Nova Flat', cursive;
     
 
 }
+.image{
+    width:70px;
+    height:50px;
+}
+h1{
+    font-size:50px;
+}
+.imagehead{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.globe{
+     width:200px;
+    animation:spin linear infinite 9000ms;
+
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+
+    }
+}

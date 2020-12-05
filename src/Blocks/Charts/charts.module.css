@@ -3,4 +3,6 @@
     justify-content: center;
     width:85%;
     color:red;
+    background-color: white;
+    border: teal solid;
 }

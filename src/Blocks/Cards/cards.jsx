@@ -6,12 +6,18 @@ import cx from 'classnames'
 import one from '../../UI/1.JPG'
 import two from '../../UI/2.JPG'
 import three from '../../UI/3.JPG'
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 // Ex6 function
 const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate } }) => {
     // console.log(data,"Cards")
     if (!confirmed) {
-        return 'Loading.......' //if the data is not being load
+       // return 'Loading.......' //if the data is not being load
+        return (
+            <div className='spinner'>
+              <CircularProgress />;
+            </div>
+          );
     }
     return (
         <div className={styles.container}>
