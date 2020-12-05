@@ -1,18 +1,64 @@
 .container{
-    margin :50 px 0;
+    margin :50px 0;
 }
 .card{
     margin: 0 2% !important;
-    color:red !important;
-    background-color: saddlebrown !important;
-    box-shadow: 1px 1px 1px 0.5px  pink !important;
+    color:#177e89 !important;
+    background-color: #fff !important;
+    box-shadow: 1px 1px 1px 0.5px  rgb(243, 234, 235) !important;
+    width:300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 .infected{
-    border-bottom: 10px solid rgba(0,0,255,0.5);
-}
-.deaths{
-    border-bottom: 10px solid rgba(0,255,0,0.5);
+    border-left: 5px solid rgba(0,0,255,0.5);
+    border-right: 5px solid rgba(0,0,255,0.5);
+
 }
 .recoverd{
-    border-bottom: 10px solid rgba(255,0,0,0.5);
+    border-left: 5px solid rgba(25, 218, 7, 0.5);
+    border-right: 5px solid rgba(25, 218, 7, 0.5);
+}
+.deaths{
+    border-left: 5px solid rgb(250, 2, 43);
+    border-right: 5px solid rgb(250, 2, 43);
+    
+}
+.icon{
+    width:100px;
+    animation:spin infinite linear 12000ms;
+    margin-bottom: 30px;
+}
+.head1{
+    color:#177e89;
+    font-size:32px;
+    font-weight: bold;
+
+}
+.r{
+color:rgba(25, 218, 7, 0.5);
+}
+.d{
+    color: rgb(250, 2, 43);
+}
+.i{
+    color:rgba(0,0,255,0.5);
+}
+.head{
+    color:#177e89;
+    font-family: 'Nova Flat', cursive;
+}
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(180deg);
+
+    }
+    100%{
+        transform: rotate(0deg);
+
+    }
 }
